@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam Sanya | Full-Stack Developer Portfolio</title>
+    <meta name="description" content="Sam Sanya's professional portfolio showcasing full-stack web development projects, including Python, Flask, React, and more.">
+    <meta name="keywords" content="Sam Sanya, Full-Stack Developer, Python, Flask, React, JavaScript, HTML, CSS, Portfolio, Web Development, Backend, Frontend">
+    <meta name="author" content="Sam Sanya">
+
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-indigo-950 text-white font-poppins antialiased">
+
+    <header class="fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300" id="navbar">
+        <nav class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#home" class="text-3xl font-bold font-montserrat text-cyan-400 hover:text-cyan-300 transition-colors duration-300">SS</a>
+            <div class="lg:hidden">
+                <button id="nav-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <ul class="hidden lg:flex space-x-8 text-lg">
+                <li><a href="#home" class="hover:text-cyan-400 transition-colors duration-300">Home</a></li>
+                <li><a href="#about" class="hover:text-cyan-400 transition-colors duration-300">About</a></li>
+                <li><a href="#skills" class="hover:text-cyan-400 transition-colors duration-300">Skills</a></li>
+                <li><a href="#portfolio" class="hover:text-cyan-400 transition-colors duration-300">Portfolio</a></li>
+                <li><a href="#contact" class="hover:text-cyan-400 transition-colors duration-300">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 overflow-y-auto pt-20 z-40 text-center">
+            <ul class="flex flex-col space-y-4 text-lg">
+                <li><a href="#home" class="block py-2 hover:bg-gray-700 transition-colors duration-300">Home</a></li>
+                <li><a href="#about" class="block py-2 hover:bg-gray-700 transition-colors duration-300">About</a></li>
+                <li><a href="#skills" class="block py-2 hover:bg-gray-700 transition-colors duration-300">Skills</a></li>
+                <li><a href="#portfolio" class="block py-2 hover:bg-gray-700 transition-colors duration-300">Portfolio</a></li>
+                <li><a href="#contact" class="block py-2 hover:bg-gray-700 transition-colors duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center animate-fade-in-bg" style="background-image: url('images/img.jpg');"></div>
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            <div class="relative z-10 p-6 max-w-4xl mx-auto opacity-0 transform translate-y-10 animate-fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-bold font-montserrat leading-tight mb-4 drop-shadow-lg">Sam Sanya</h1>
+                <p class="text-2xl md:text-3xl font-light text-cyan-400 mb-8 drop-shadow-md hero-subheading">Crafting Robust Web Solutions</p>
+                <a href="#portfolio" class="btn-primary transform hover:scale-105 transition-transform duration-300">Explore Projects <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gray-900 overflow-hidden">
+            <div class="container mx-auto px-6 lg:flex items-center gap-12">
+                <div class="lg:w-1/3 mb-10 lg:mb-0 transform opacity-0 translate-y-10 reveal-on-scroll">
+                    <img src="images/613A7673.jpg" alt="Sam sanya Avatar" class="rounded-full w-64 h-64 object-cover mx-auto lg:mx-0 shadow-lg border-4 border-cyan-400 animate-pulse-border">
+                </div>
+                <div class="lg:w-2/3 transform opacity-0 translate-y-10 reveal-on-scroll delay-200">
+                    <h2 class="text-4xl font-bold font-montserrat mb-6 text-center lg:text-left">About Me</h2>
+                    <p class="text-lg leading-relaxed text-gray-300 mb-8">
+                        I am an enthusiastic and dedicated aspiring Full-Stack Developer. My passion lies in crafting robust and scalable web applications from conception to deployment. I possess a strong foundation in backend development using Python and Flask, coupled with expertise in PostgreSQL for efficient data management and JWT authentication for secure API access. On the frontend, I am proficient in building dynamic and responsive user interfaces with React, JavaScript, HTML, and CSS (including Tailwind CSS). I am eager to apply my problem-solving skills and comprehensive understanding of modern web technologies to contribute to innovative projects and grow within a collaborative development environment.
+                    </p>
+                    <div class="text-center lg:text-left mt-8">
+                        <a href="docs/Sam SANYA CV.pdf" download="Sam-Sanya-Resume.pdf" class="btn-primary transform hover:scale-105 transition-transform duration-300">
+                            Download My Resume <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 bg-gray-950 overflow-hidden">
+            <div class="container mx-auto px-6 transform opacity-0 translate-y-10 reveal-on-scroll">
+                <h2 class="text-4xl font-bold font-montserrat mb-6 text-center text-white">Skills & Technologies</h2>
+                <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">SQLAlchemy</span>
+                    <span class="skill-tag">Flask-RESTful</span>
+                    <span class="skill-tag">Flask-JWT-Extended</span>
+                    <span class="skill-tag">Flask-Bcrypt</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">RESTful APIs</span>
+                    <span class="tech-tag">JWT Authentication</span>
+                    <span class="tech-tag">Database Migrations</span>
+                    <span class="tech-tag">ORM</span>
+                    <span class="tech-tag">Environment Variables</span>
+                    <span class="tech-tag">Postman</span>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="portfolio" class="py-20 bg-gray-900 overflow-hidden">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold font-montserrat mb-12 text-center text-white transform opacity-0 translate-y-10 reveal-on-scroll">My Projects</h2>
+
+                <div class="flex flex-wrap justify-center gap-4 mb-12 transform opacity-0 translate-y-10 reveal-on-scroll delay-100">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="python-app">Python Apps</button>
+                </div>
+
+                <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <div class="portfolio-item transform opacity-0 translate-y-10 reveal-on-scroll project-card fullstack">
+                        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                            <img src="images/bid.jpg" alt="DriveFix Project" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-2">AfriAuction: A bidding-management-system</h3>
+                                <p class="text-gray-300 text-sm mb-4">AfriAuction is a full-stack app where African creators sell handmade items through live auctions. It features real-time bidding, secure payments, and fair earnings without middlemen. Built with React, Flask, and SQLAlchemy for a seamless auction experience.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Tailwind CSS</span>
+                                </div>
+                                <a href="https://github.com/ssamielz/bidding-management-system.git" target="_blank" class="btn-secondary">View Code <i class="fab fa-github ml-2"></i></a>
+                                <p class="text-xs text-gray-400 mt-2">Live Demo Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item transform opacity-0 translate-y-10 reveal-on-scroll delay-100 project-card backend python-app">
+                        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                            <img src="images/late-show-api.jpg" alt="Late Show API Project" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-2">Late Show API</h3>
+                                <p class="text-gray-300 text-sm mb-4">A robust backend REST API built with Flask, managing guests, episodes, and their appearances for a late-night show. Features include JWT authentication for protected routes, PostgreSQL database integration, and comprehensive CRUD operations.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">JWT</span>
+                                </div>
+                                <a href="https://github.com/ssamielz/late-show-api-challenge" target="_blank" class="btn-secondary">View Code <i class="fab fa-github ml-2"></i></a>
+                                <p class="text-xs text-gray-400 mt-2">Backend Only - See GitHub for details</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item transform opacity-0 translate-y-10 reveal-on-scroll delay-200 project-card backend python-app">
+                        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                            <img src="images/pizza-api.jpg" alt="Pizza Restaurant API Project" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-2">Pizza Restaurant API</h3>
+                                <p class="text-gray-300 text-sm mb-4">This project implements a RESTful API for a Pizza Restaurant using Flask, following the MVC architectural pattern. It allows managing restaurants, pizzas, and their associations.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">SQLAlchemy</span>
+                                    <span class="tech-tag">SQLite</span>
+                                </div>
+                                <a href="https://github.com/ssamielz/Pizza-shop-challenge.git" target="_blank" class="btn-secondary">View Code <i class="fab fa-github ml-2"></i></a>
+                                <p class="text-xs text-gray-400 mt-2">Backend Only - See GitHub for details</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item transform opacity-0 translate-y-10 reveal-on-scroll project-card cli python-app">
+                        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                            <img src="images/libmate.jpg" alt="LibMate-Manager Project" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-2">Developer Diary-Skill tracker</h3>
+                                <p class="text-gray-300 text-sm mb-4">Dev Diary is a full-stack app for tracking coding skills, learning goals, and daily progress. It helps developers stay consistent, reflect on growth, and reach milestones. Built with React, Flask, and SQLAlchemy for a clean and interactive interface.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Alembic</span>
+                                    <span class="tech-tag">SQLite</span>
+                                </div>
+                                <a href="https://github.com/ssamielz/Dev-diary-skill-tracker.git" target="_blank" class="btn-secondary">View Code <i class="fab fa-github ml-2"></i></a>
+                                <p class="text-xs text-gray-400 mt-2">Command-Line Tool - See GitHub for details</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item transform opacity-0 translate-y-10 reveal-on-scroll delay-100 project-card frontend">
+                        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                            <img src="images/const.jpg" alt="Construction Project" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-2">Construction Website</h3>
+                                <p class="text-gray-300 text-sm mb-4">An interactive web application allowing users to explore a website showcasing construction services, view past and ongoing projects and client testimonials. Built with HTML, CSS, JavaScript, and Flask for a responsive and professional experience.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">JSON Server</span>
+                                </div>
+                                <a href="https://github.com/ssamielz/construction.git" target="_blank" class="btn-secondary">View Code <i class="fab fa-github ml-2"></i></a>
+                                <p class="text-xs text-gray-400 mt-2">Live Demo Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item transform opacity-0 translate-y-10 reveal-on-scroll delay-200 project-card frontend">
+                        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                            <img src="images/clock.png" alt="A clock Website Project" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-2">A Clock application</h3>
+                                <p class="text-gray-300 text-sm mb-4">A web app that features a live clock, alarm system, and a searchable world time zone list.
+Users can set alarms, track different time zones, and manage a personal watchlist.
+Built with JavaScript, HTML, and CSS for a clean, interactive experience.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Tailwind CSS</span>
+                                </div>
+                                <a href="https://github.com/ssamielz/Clock_app.git" target="_blank" class="btn-secondary">View Code <i class="fab fa-github ml-2"></i></a>
+                                <p class="text-xs text-gray-400 mt-2">Live Demo Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-gray-800 relative overflow-hidden contact-section-bg">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <h2 class="text-4xl font-bold font-montserrat mb-6 text-white transform opacity-0 translate-y-10 reveal-on-scroll">
+                    Get In Touch
+                </h2>
+                <p class="text-lg text-gray-200 mb-10 max-w-2xl mx-auto transform opacity-0 translate-y-10 reveal-on-scroll delay-100">
+                    Have a project in mind or just want to say hello? Feel free to reach out!
+                </p>
+
+                <div class="contact-form-block transform opacity-0 translate-y-10 reveal-on-scroll delay-200">
+                    <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-6">Send Me a Message</h3>
+                    <form class="max-w-xl mx-auto space-y-6" action="https://formspree.io/f/manbyyjl" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <input type="text" id="name" name="name" placeholder="Your Name" class="form-input p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500" required />
+                            <input type="email" id="email" name="_replyto" placeholder="Your Email" class="form-input p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500" required />
+                            <input type="text" id="subject" name="_subject" placeholder="Subject" class="form-input p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
+                        </div>
+                        <div>
+                            <textarea id="message" name="message" rows="6" placeholder="Your Message" class="form-textarea w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 resize-y" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary bg-cyan-500 text-gray-900 px-8 py-3 rounded-md text-lg font-semibold hover:bg-cyan-600 transform hover:scale-105 transition-transform duration-300">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <hr class="border-t border-gray-700 my-10 max-w-md mx-auto transform opacity-0 reveal-on-scroll delay-300">
+
+                <div class="contact-details transform opacity-0 translate-y-10 reveal-on-scroll delay-400">
+                    <p class="text-lg text-gray-200 mb-6">You can also find me here:</p>
+
+                    <div class="flex flex-wrap justify-center gap-8 mb-6">
+                        <div class="flex items-center text-lg text-gray-300">
+                            <i class="fas fa-envelope mr-3 text-cyan-400"></i>
+                            <a href="mailto:ssamsanya3@gmail.com" class="hover:text-cyan-400">ssamsanya3@gmail.com</a>
+                        </div>
+                        <div class="flex items-center text-lg text-gray-300">
+                            <i class="fas fa-phone mr-3 text-cyan-400"></i>
+                            <a href="tel:0716266299" class="hover:text-cyan-400">0716266299</a>
+                        </div>
+                        <div class="flex items-center text-lg text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-3 text-cyan-400"></i>
+                            <span>Kenya, Nairobi</span>
+                        </div>
+                    </div>
+
+                   
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-950 py-8 text-center border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-row justify-center flex-wrap gap-4 mb-4">
+                <a href="https://www.linkedin.com/in/sam-sanya-591499183/" target="_blank" class="social-icon text-2xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/ssamielz" target="_blank" class="social-icon text-2xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/_samielz/" target="_blank" class="social-icon text-2xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/254716266299" target="_blank" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                
+            </div>
+            <p class="text-white mb-2">Email: ssamsanya3@gmail.com</p>
+            <p class="text-gray-200 text-sm">&copy; <span id="current-year"></span> Sam Sanya. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JVZE8Z57BJ');
+    </script>
+</body>
+</html>

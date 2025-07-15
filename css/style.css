@@ -1,0 +1,337 @@
+/* Base Styles & Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Deeper, more saturated dark blue/indigo gradient */
+    background: linear-gradient(to bottom right, #0F172A, #1E293B); /* Darker, more atmospheric gradient */
+    color: #E0E7FF; /* Softer white for general text, almost off-white */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #00FFFF; /* Bright Cyan for headings */
+}
+
+/* Navigation */
+#navbar {
+    background-color: rgba(0, 15, 30, 0.8); /* Darker, slightly blue-tinted transparent navbar */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.7); /* Stronger shadow */
+}
+#mobile-menu {
+    background-color: rgba(0, 15, 30, 0.95); /* Consistent dark background for mobile menu */
+}
+/* Navbar links */
+header nav ul li a {
+    color: #A7DBF5; /* Lighter blue for nav links */
+}
+header nav ul li a:hover {
+    color: #00FFFF; /* Bright cyan on hover */
+}
+
+
+/* Hero Section Animations */
+@keyframes fadeInBg {
+    from { opacity: 0; transform: scale(1.1); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-bg {
+    animation: fadeInBg 2s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards 1.5s; /* Delay for background to settle */
+}
+
+/* Ensure hero section content is vertically centered for all screen sizes */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    min-height: 100vh;
+    padding-top: 60px;
+}
+/* Adjusted for smaller screens: Tweak vertical positioning for better fill */
+#home .relative.z-10 {
+    padding: 20px;
+    max-width: 90%;
+}
+/* Fine-tune heading and paragraph margins on smaller screens */
+#home h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem; /* Reduced margin for closer subheading */
+    color: #00FFFF; /* Ensure hero title is bright cyan */
+}
+/* New style for the subheading in hero */
+#home .hero-subheading {
+    font-size: 1.25rem; /* Smaller than main heading */
+    color: #A7DBF5; /* Lighter blue for subheading */
+    margin-bottom: 2rem; /* Space before the button */
+    font-weight: 400; /* Normal weight */
+}
+@media (min-width: 768px) {
+    #home h1 {
+        font-size: 5rem;
+    }
+    #home .hero-subheading { /* Apply media query to subheading too */
+        font-size: 1.875rem;
+    }
+    #home .relative.z-10 {
+        padding: 6rem;
+        max-width: 48rem;
+    }
+}
+/* General padding for the hero content to avoid it being hidden under the fixed nav */
+#home .relative.z-10 {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+
+/* Buttons */
+.btn-primary {
+    @apply inline-block px-8 py-4 text-lg font-semibold rounded-lg border-2 transition-all duration-300; /* Changed rounded-full to rounded-lg for squarer corners like in image */
+    background-color: #00FFFF; /* Solid bright cyan background like in image */
+    color: #1A202C; /* Very dark text for strong contrast on cyan */
+    border-color: #00FFFF; /* Border matches background for solid look */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Prominent initial glow */
+}
+.btn-primary:hover {
+    background-color: #00AADD; /* Slightly darker cyan on hover */
+    color: #1A202C; /* Maintain dark text on hover */
+    border-color: #00AADD; /* Border matches background on hover */
+    transform: scale(1.02); /* Less aggressive scale on hover for a cleaner feel */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.9); /* Even stronger glow on hover */
+}
+
+.btn-secondary {
+    @apply inline-block px-6 py-3 text-base font-medium rounded-full border text-gray-300 transition-all duration-300;
+    border-color: #0077AA; /* Muted blue border for secondary */
+    background: transparent;
+}
+.btn-secondary:hover {
+    @apply text-white; /* Text becomes white on hover */
+    border-color: #00FFFF; /* Bright Cyan border on hover */
+    background-color: rgba(0, 255, 255, 0.1); /* Subtle background fill */
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Subtle glow on hover */
+}
+
+
+/* About Section - Avatar Animation */
+@keyframes pulseBorder {
+    0% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0); }
+}
+.animate-pulse-border {
+    animation: pulseBorder 2s infinite;
+    border-color: #00FFFF; /* Ensure cyan border for the avatar */
+}
+/* Adjust about section text color for consistency */
+#about p {
+    color: #CBD5E1; /* Lighter gray for readability on dark background */
+}
+
+/* Skills Tags */
+.skill-tag {
+    @apply bg-blue-900 text-white text-sm px-4 py-2 rounded-full shadow-md transition-all duration-300; /* Darker blue background */
+    border: 1px solid #00FFFF; /* Bright Cyan border */
+    color: #00FFFF; /* Bright Cyan text for skills */
+}
+.skill-tag:hover {
+    @apply bg-cyan-600 text-gray-900 transform scale-105;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Stronger glow */
+}
+
+/* Portfolio Filtering Buttons */
+.filter-btn {
+    @apply px-6 py-2 rounded-full text-lg font-medium transition-all duration-300;
+    background: transparent;
+    border: 2px solid #00FFFF; /* Vibrant Neon Blue Border */
+    color: #00FFFF; /* Neon Blue text */
+    min-width: 120px;
+    text-align: center;
+    transform: scale(1);
+}
+.filter-btn:hover:not(.active) {
+    border-color: #00AADD; /* Slightly darker cyan on hover */
+    @apply text-white transform scale-105;
+    background-color: rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+.filter-btn.active {
+    @apply bg-cyan-400 text-gray-900 shadow-lg; /* Active button uses a solid cyan fill */
+    transform: scale(1.05);
+    border-color: #00FFFF;
+}
+
+
+/* Project Cards */
+.project-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    background-color: #1A202C; /* Darker background for cards */
+    border: 1px solid #2D3748; /* Softer border initially */
+}
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 255, 255, 0.3); /* Cyan glow on hover */
+    border-color: #00FFFF; /* Bright Cyan border on hover */
+}
+.project-card h3 {
+    color: #00FFFF; /* Project titles are bright cyan */
+}
+.project-card p {
+    color: #A7DBF5; /* Lighter blue for project descriptions */
+}
+
+.tech-tag {
+    @apply bg-gray-700 text-xs px-3 py-1 rounded-full;
+    background-color: #0F172A; /* Even darker background for tech tags */
+    color: #00FFFF; /* Bright Cyan text for tech tags */
+    border: 1px solid rgba(0, 255, 255, 0.3); /* Subtle cyan border */
+}
+
+/* Contact Form Inputs */
+.form-input, .form-textarea {
+    @apply w-full p-4 rounded-lg text-white focus:ring-2 transition-all duration-300;
+    /* Changed border to be more subtle, as seen in the image */
+    border: 1px solid #4A5568; /* A softer, darker gray border */
+    background-color: #1A202C; /* Darker background for consistency with form block */
+    color: #E0E7FF; /* Ensure typed text is visible (light color) */
+    caret-color: #00FFFF; /* Cyan blinking cursor */
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #A7DBF5; /* Lighter blue for placeholder text */
+    opacity: 1; /* Ensures placeholder is not transparent */
+}
+.form-input:focus,
+.form-textarea:focus {
+    outline: none; /* Remove default outline */
+    border-color: #00FFFF; /* Bright Cyan border on focus */
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.4); /* Subtle cyan glow on focus */
+}
+.form-textarea {
+    resize: vertical;
+    /* Specific overrides for textarea if needed, though form-input styles apply */
+}
+
+/* Contact Section Background (You can choose an image or pattern) */
+.contact-section-bg {
+    /* Keeping this for potential subtle pattern */
+    background-image: url('../images/dark-geometric-pattern.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #0F172A; /* Fallback/base color */
+}
+
+/* Social Icons */
+.social-icon {
+    @apply text-3xl transition-all duration-300;
+    color: #00FFFF; /* Bright Cyan for icons */
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 255, 255, 0.5); /* Stronger cyan border */
+    background-color: rgba(0, 255, 255, 0.05); /* Very subtle transparent cyan fill */
+}
+
+.social-icon:hover {
+    @apply text-gray-900 shadow-lg transform scale-110;
+    background-color: #00FFFF; /* Solid bright cyan on hover */
+    border-color: #00AADD; /* Darker cyan border on hover */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Intense glow on hover */
+}
+
+
+/* --- CONTACT SECTION STYLES --- */
+#contact .container {
+    @apply mx-auto px-6;
+}
+
+#contact .contact-form-block {
+    /* Adjusted for consistency with new dark theme and image */
+    background-color: #1A202C; /* Darker background for form block */
+    border: 1px solid #2D3748; /* Softer border for the block itself */
+    @apply p-8 rounded-lg shadow-xl max-w-2xl mx-auto mb-10;
+}
+
+#contact .contact-details {
+    @apply max-w-2xl mx-auto text-center;
+}
+
+/* Specific styling for the inline contact details (Email, Phone, Location) */
+#contact .contact-details > div { /* Target the div containing email, phone, location */
+    @apply text-lg;
+    color: #CBD5E1; /* Lighter gray for direct contact text */
+}
+
+#contact .contact-details > div i { /* Icons within direct contact details */
+    @apply mr-3 text-xl;
+    color: #00FFFF; /* Bright Cyan for these icons */
+}
+#contact .contact-details > div a {
+    color: #CBD5E1; /* Ensure links have a consistent color */
+}
+#contact .contact-details > div a:hover {
+    color: #00FFFF; /* Bright Cyan on hover for these links */
+}
+
+
+/* MODIFIED: contact-socials-grid to ensure horizontal centering for social icons */
+/* The HTML structure already applies 'flex flex-wrap justify-center gap-4' to the parent div,
+    so this CSS class is redundant for flex properties, but kept for clarity if needed for other styles. */
+#contact .flex.justify-center.flex-wrap.gap-4 { /* Targeting the existing social icon flex container */
+    margin-top: 2.5rem; /* Add some space above social icons in contact section */
+    margin-bottom: 2.5rem; /* Add some space below social icons in contact section */
+}
+
+/* Footer Section */
+footer {
+    background-color: #0A0F1A; /* Even darker, more subtle dark blue for the footer */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    border-top: 1px solid #1F2937; /* Tailwind's border-gray-800 */
+}
+footer .social-icon {
+    border: 1px solid rgba(0, 255, 255, 0.3); /* Slightly more subtle border in footer */
+    background-color: transparent; /* No background fill in footer */
+}
+footer .social-icon:hover {
+    background-color: rgba(0, 255, 255, 0.2); /* Subtle hover background in footer */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Softer glow in footer */
+}
+footer p {
+    color: #A7DBF5; /* Lighter blue for footer text */
+}
+
+/* Scroll Reveal Animations (JavaScript controlled) */
+.reveal-on-scroll {
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Delay for staggered reveal */
+.reveal-on-scroll.delay-100 { transition-delay: 0.1s; }
+.reveal-on-scroll.delay-200 { transition-delay: 0.2s; }
+.reveal-on-scroll.delay-300 { transition-delay: 0.3s; }
+.reveal-on-scroll.delay-400 { transition-delay: 0.4s; }
+.reveal-on-scroll.delay-500 { transition-delay: 0.5s; }
